@@ -4,18 +4,22 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Message encrypt</title>
+    <title>Go Crypto Generator</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
 </head>
 <body>
+
 	<div class="row">
+
+		<h1>Go Crypto Generator</h1>
+
 		<form action="" method="POST" class="row">
 				<div class="medium-6 columns">
 					<input type="text" name="message" value="{{ .Message }}" placeholder="message" required>
 				</div>
 				<div class="medium-5 columns">
-					<input type="text" name="secret" value="{{ .Secret }}" placeholder="secret">
+					<input type="text" name="secret" value="{{ .Secret }}" placeholder="secret key">
 				</div>
 				<div class="medium-1 columns">
 					<input type="submit" value="Encrypt" class="button">
@@ -60,7 +64,7 @@
 			{{ if .HmacMd5 }}
 			<td><code>{{ .HmacMd5 }}</code></td>
 			{{ else }}
-			<td><em>Need a secret</em></td>
+			<td><em>Need a secret key</em></td>
 			{{ end }}
 		</tr>			
 		<tr>
@@ -69,7 +73,7 @@
 			{{ if .HmacSha1 }}
 			<td><code>{{ .HmacSha1 }}</code></td>
 			{{ else }}
-			<td><em>Need a secret</em></td>
+			<td><em>Need a secret key</em></td>
 			{{ end }}
 		</tr>		
 		<tr>
@@ -78,7 +82,7 @@
 			{{ if .HmacSha256 }}
 			<td><code>{{ .HmacSha256 }}</code></td>
 			{{ else }}
-			<td><em>Need a secret</em></td>
+			<td><em>Need a secret key</em></td>
 			{{ end }}
 		</tr>
 		<tr>
@@ -87,7 +91,7 @@
 			{{ if .HmacSha512 }}
 			<td><code>{{ .HmacSha512 }}</code></td>
 			{{ else }}
-			<td><em>Need a secret</em></td>
+			<td><em>Need a secret key</em></td>
 			{{ end }}
 		</tr>
 		</tbody>
